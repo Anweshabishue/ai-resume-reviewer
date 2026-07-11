@@ -43,52 +43,6 @@ resume_reviewer/
 └── venv/
 ```
 
-## ⚙️ Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/Anweshabishue/ai-resume-reviewer.git
-cd ai-resume-reviewer
-```
-
-Create virtual environment:
-
-```bash
-python -m venv venv
-```
-
-Activate virtual environment:
-
-### Windows
-
-```bash
-venv\Scripts\activate
-```
-
-### Linux / Mac
-
-```bash
-source venv/bin/activate
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Create a `.env` file:
-
-```env
-GROQ_API_KEY=your_api_key_here
-```
-
-Run the application:
-
-```bash
-streamlit run app.py
-```
 
 ## 📸 Application Preview
 
