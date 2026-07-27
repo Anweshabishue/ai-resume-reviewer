@@ -68,6 +68,4 @@ Upload your resume and receive AI-generated feedback including:
 
 **Anwesha Bishue**
 
-MCA Student | Python Developer | AI Enthusiast
 
-GitHub: https://github.com/Anweshabishue
