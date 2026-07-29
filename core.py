@@ -22,7 +22,7 @@ def extract_text_from_pdf(uploaded_file) -> str:
     return "\n".join(pages).strip()
 
 
-def review_resume(resume_text: str, job_role: str = "") -> str:
+def review_resume(resume_text: str, job_role: str = "",job_description: str = "") -> str:
     api_key = os.getenv("GROQ_API_KEY")
 
     if not api_key:
@@ -32,12 +32,20 @@ def review_resume(resume_text: str, job_role: str = "") -> str:
 
     job_context = (
         f"The candidate is targeting this role: {job_role}\n"
-        if job_role else ""
-    )
+        if job_role.strip()
+        else "No Target Job Role Provided"
+)
+
+    jd_context = (
+    job_description
+    if job_description.strip()
+    else "No Job Description Provided"
+)
 
     prompt = REVIEW_PROMPT_TEXT.format(
         resume=resume_text[:MAX_RESUME_CHARS],
-        job_context=job_context
+        job_context=job_context,
+        job_description=jd_context
     )
 
     response = client.chat.completions.create(
