@@ -2,17 +2,19 @@ import streamlit as st
 
 from core import extract_text_from_pdf, review_resume
 
-# ── Page config ─────────────────────────────────────────────────────────────
 st.set_page_config(page_title="Resume Reviewer", page_icon="📄")
 st.title("📄 AI Resume Reviewer")
 st.caption("Upload your resume (PDF) and get instant, actionable feedback.")
     
-
-# ── Main UI ──────────────────────────────────────────────────────────────────
 uploaded_file = st.file_uploader("Upload your resume (PDF)", type=["pdf"])
 job_role      = st.text_input(
     "Target job role (optional)",
     placeholder="e.g. Data Engineer at a startup",
+)
+job_description = st.text_area(
+    "Paste Job Description (Optional)",
+    height=200,
+    placeholder="Paste the job description here..."
 )
 
 if st.button("🔍 Review My Resume", use_container_width=True):
@@ -33,7 +35,7 @@ if st.button("🔍 Review My Resume", use_container_width=True):
 
     with st.spinner("Reviewing with AI..."):
         try:
-            review = review_resume(resume_text,job_role)
+            review = review_resume(resume_text,job_role,job_description)
         except Exception as e:
             st.error(f"Review failed: {e}")
             st.stop()
