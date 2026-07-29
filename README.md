@@ -9,11 +9,12 @@ An AI-powered resume analysis tool that reviews resumes and provides actionable 
 - Analyze resume using AI
 - ATS score breakdown
 - Review resume format and structure
-- Identify missing keywords
+- Resume Match Score with Job Description
+- Matching Skills Identification
+- Missing Skills & Keywords Detection
 - Analyze technical and soft skills
 - Evaluate projects and experience sections
 - Download review results as a markdown file
-- Optional target job role for personalized feedback
 
 ## 🛠️ Tech Stack
 
@@ -46,20 +47,23 @@ resume_reviewer/
 
 ## 📸 Application Preview
 
-Upload your resume and receive AI-generated feedback including:
-
-- ATS Score
-- Resume Format Analysis
-- Missing Keywords
-- Skills Evaluation
-- Project Assessment
-- Suggestions for Improvement
+1. Upload a PDF resume.
+2. Optionally enter a target job role.
+3. Optionally paste a job description.
+4. The application extracts the resume text.
+5. The Groq LLM analyzes the resume.
+6. The application generates:
+   - ATS Score
+   - Resume Match Score
+   - Skills Analysis
+   - Missing Keywords
+   - Recruiter's Feedback
+   - Interview Readiness Score
+   - Resume Improvement Suggestions
 
 ## 🔮 Future Improvements
 
 - Support for DOCX resumes
-- Job description matching
-- Resume keyword optimization
 - Multiple resume templates
 - Resume rewriting suggestions
 - Export review as PDF
