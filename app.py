@@ -6,7 +6,7 @@ st.set_page_config(page_title="Resume Reviewer", page_icon="📄")
 st.title("📄 AI Resume Reviewer")
 st.caption("Upload your resume (PDF) and get instant, actionable feedback.")
     
-uploaded_file = st.file_uploader("Upload your resume (PDF)", type=["pdf"])
+uploaded_file = st.file_uploader("Upload your resume (PDF)", type=["pdf","docx"])
 job_role      = st.text_input(
     "Target job role (optional)",
     placeholder="e.g. Data Engineer at a startup",
