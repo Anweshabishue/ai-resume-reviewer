@@ -63,7 +63,6 @@ resume_reviewer/
 
 ## 🔮 Future Improvements
 
-- Support for DOCX resumes
 - Multiple resume templates
 - Resume rewriting suggestions
 - Export review as PDF
